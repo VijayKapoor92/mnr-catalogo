@@ -7,22 +7,32 @@ class Catalogo extends Component {
     constructor(props){
         super(props);
         this.state = {
-            catalogue: []
+            catalogue: [],
+            mouse: 'out'
         }
     }
 
     componentWillMount() {
-        const catalogue = this.getCatalogue();
+        const catalogue = getCatalogue();
         this.setState({ catalogue });
     }
 
-    getCatalogue = () => getCatalogue();
+    handleMouseEnter = () =>
+        this.setState({mouse: 'in'});
+
+    handleMouseLeave = () =>
+        this.setState({mouse: 'out'});
 
     render() {
-        const { catalogue } = this.state;
+        const { catalogue, mouse } = this.state;
 
         return (
-            <Catalogue catalogue={catalogue} />
+            <Catalogue
+                catalogue={catalogue}
+                onMouseEnter={this.handleMouseEnter}
+                onMouseLeave={this.handleMouseLeave}
+                mouse={mouse}
+            />
         );
     }
 }
