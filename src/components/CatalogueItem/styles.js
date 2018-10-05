@@ -1,4 +1,5 @@
 import {MNR_CARD_HEIGHT} from "../../utils/constants";
+import {blue} from '@material-ui/core/colors';
 
 export const styles = theme => ({
     paper: {
@@ -52,5 +53,53 @@ export const styles = theme => ({
     },
     price: {
         fontSize: 24
+    },
+    promotionContainer: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column'
+    },
+    prefix: {
+        fontSize: 12,
+        fontWeight: 'bold'
+    },
+    priceWpromotion: {
+        fontSize: 14,
+        fontWeight: 'bold'
+    },
+    promotion: {
+        fontWeight: 'bold'
+    },
+    latePrice: {
+        color: '#BDBDBD',
+        textDecoration: 'line-through',
+        textAlign: 'center'
+    },
+    newPrice: {
+        textAlign: 'center',
+        fontSize: 24
+    },
+    colorBlue: {
+        color: blue[700]
+    },
+    font10: {
+        fontSize: 10
+    },
+    bold: {
+        fontWeight: 'bold'
+    },
+    itemInfo: {
+        position: 'absolute',
+        top: 0,
+        bottom: 0,
+        right: 0,
+        left: 0,
+        backgroundColor: 'rgba(900, 900, 900, 0)',
+        zIndex: 1,
+        transition: 'background-color .5s',
+    },
+    itemInfoHover: {
+        backgroundColor: 'rgba(900, 900, 900, .9)',
+        // visibility: 'visible'
     }
 });
