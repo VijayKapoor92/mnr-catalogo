@@ -5,7 +5,7 @@ import CatalogueItem from '../CatalogueItem';
 
 const CatalogueList = ({classes, catalogue}) => {
     return (
-        <Grid container spacing={24}>
+        <Grid container>
             {catalogue.map(({id, nm_produto, descricao, vl_unitario, vl_promocional, nm_foto}) => (
                 <CatalogueItem
                     key={id}
